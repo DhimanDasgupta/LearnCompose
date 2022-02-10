@@ -1,0 +1,94 @@
+import com.dhimandasgupta.buildsrc.*
+
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk App.COMPILE_VERSION_SDK
+
+    defaultConfig {
+        minSdk App.MIN_SDK
+        targetSdk App.TARGET_SDK
+        versionCode App.VERSION_CODE
+        versionName App.VERSION_NAME
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion AndroidX.Compose.VERSION
+        kotlinCompilerVersion AndroidX.Compose.KOTLIN_COMPILER_VERSION
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    implementation project(path: ':ui-theme')
+    implementation project(path: ':commom-android')
+
+    // Apis
+    api(AndroidX.WINDOW)
+    api(AndroidX.Compose.ANIMATION)
+    api(AndroidX.Compose.COMPILER)
+    api(AndroidX.Compose.FOUNDATION)
+    api(AndroidX.Compose.MATERIAL)
+    api(AndroidX.Compose.RUNTIME)
+    api(AndroidX.Compose.UI)
+    debugApi(AndroidX.Compose.TOOL_PREVIEW)
+    api(Material3.MATERIAL3)
+
+    // Accompanist
+    api(Accompanist.APPCOMPAT_THEME)
+    api(Accompanist.DRAWABLE_PAINTER)
+    api(Accompanist.FLOW_LAYOUT)
+    api(Accompanist.INSET_UI)
+    api(Accompanist.INSETS)
+    api(Accompanist.NAVIGATION_ANIMATION)
+    api(Accompanist.NAVIGATION_MATERIAL)
+    api(Accompanist.PAGER_INDICATORS)
+    api(Accompanist.PAGER)
+    api(Accompanist.PERMISSIONS)
+    api(Accompanist.PLACEHOLDER_MATERIAL)
+    api(Accompanist.PLACEHOLDER)
+    api(Accompanist.SWIPE_REFRESH)
+    api(Accompanist.SYSTEM_UI_CONTROLLER)
+
+    // Navigation
+    api(AndroidX.COMPOSE_NAVIGATION)
+
+    // Coil
+    api(Others.COIL)
+
+    // Hilt
+//    api(AndroidX.Hilt.VIEW_MODEL)
+    api(AndroidX.Hilt.NAVIGATION)
+
+    // Debug apis
+    debugApi(AndroidX.Compose.TOOL)
+
+    // Test apis
+    androidTestApi(AndroidX.Compose.TEST_UI)
+}

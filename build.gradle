@@ -1,0 +1,30 @@
+import com.dhimandasgupta.buildsrc.*
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath ClassPath.ANDROID_GRADLE_PLUGIN
+        classpath ClassPath.KOTLIN_GRADLE_PLUGIN
+        classpath ClassPath.HILT_GRADLE_PLUGIN
+        classpath ClassPath.KOTLIN_SERIALIZATION_GRADLE_PLUGIN
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        freeCompilerArgs += [
+                '-Xopt-in=kotlin.RequiresOptIn',
+        ]
+    }
+}
