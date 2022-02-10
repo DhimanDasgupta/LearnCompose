@@ -1,7 +1,7 @@
 package com.dhimandasgupta.buildsrc
 
 object Kotlin {
-    const val VERSION = "1.6.0"
+    const val VERSION = "1.6.10"
     const val KOTLIN_STD_LIB = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$VERSION"
     const val KOTLIN_ANDROID_EXTENSION = "org.jetbrains.kotlin:kotlin-android-extensions:$VERSION"
     const val KOTLIN_STD_LIB_COMMON = "org.jetbrains.kotlin:kotlin-stdlib-common:$VERSION"
