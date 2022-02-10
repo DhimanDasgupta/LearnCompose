@@ -22,8 +22,7 @@ object AndroidX {
     }
 
     object Compose {
-        const val VERSION = "1.1.0-rc01"
-        const val KOTLIN_COMPILER_VERSION = "1.6.0"
+        const val VERSION = "1.1.0"
 
         // Apis
         const val ANIMATION = "androidx.compose.animation:animation:$VERSION"
