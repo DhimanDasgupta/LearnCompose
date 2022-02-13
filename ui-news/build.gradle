@@ -50,5 +50,6 @@ dependencies {
     implementation project(path: ':ui-composables')
     implementation project(path: ':data-news')
 
+    api(AndroidX.Compose.TOOL)
     api(AndroidX.WINDOW)
 }

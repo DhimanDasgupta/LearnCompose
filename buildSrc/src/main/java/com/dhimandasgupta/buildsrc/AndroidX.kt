@@ -22,7 +22,7 @@ object AndroidX {
     }
 
     object Compose {
-        const val VERSION = "1.1.0"
+        private const val VERSION = "1.1.0"
 
         // Apis
         const val ANIMATION = "androidx.compose.animation:animation:$VERSION"

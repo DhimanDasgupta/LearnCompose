@@ -56,7 +56,8 @@ dependencies {
     api(AndroidX.Compose.MATERIAL)
     api(AndroidX.Compose.RUNTIME)
     api(AndroidX.Compose.UI)
-    debugApi(AndroidX.Compose.TOOL_PREVIEW)
+    api(AndroidX.Compose.TOOL)
+    // debugApi(AndroidX.Compose.TOOL_PREVIEW)
     api(Material3.MATERIAL3)
 
     // Accompanist
@@ -86,7 +87,7 @@ dependencies {
     api(AndroidX.Hilt.NAVIGATION)
 
     // Debug apis
-    debugApi(AndroidX.Compose.TOOL)
+    // debugApi(AndroidX.Compose.TOOL)
 
     // Test apis
     androidTestApi(AndroidX.Compose.TEST_UI)

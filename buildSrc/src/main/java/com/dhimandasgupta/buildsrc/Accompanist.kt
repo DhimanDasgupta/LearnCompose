@@ -1,7 +1,7 @@
 package com.dhimandasgupta.buildsrc
 
 object Accompanist {
-    private const val VERSION = "0.23.0"
+    private const val VERSION = "0.24.2-alpha"
 
     const val APPCOMPAT_THEME = "com.google.accompanist:accompanist-appcompat-theme:$VERSION"
     const val DRAWABLE_PAINTER = "com.google.accompanist:accompanist-drawablepainter:$VERSION"
