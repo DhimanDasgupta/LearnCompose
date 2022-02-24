@@ -3,26 +3,26 @@ package com.dhimandasgupta.buildsrc
 object AndroidX {
     const val CORE_SPLASH_SCREEN = "androidx.core:core-splashscreen:1.0.0-beta01"
     const val CORE_KTX = "androidx.core:core-ktx:1.7.0"
-    const val APPCOMPAT = "androidx.appcompat:appcompat:1.4.0"
-    const val MATERIAL = "com.google.android.material:material:1.5.0-alpha05"
-    const val LIFECYCLE_RUNTIME_KTX = "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
+    const val APPCOMPAT = "androidx.appcompat:appcompat:1.4.1"
+    const val MATERIAL = "com.google.android.material:material:1.5.0"
+    const val LIFECYCLE_RUNTIME_KTX = "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
     const val ACTIVITY_COMPOSE = "androidx.activity:activity-compose:1.4.0"
 
-    const val COMPOSE_NAVIGATION = "androidx.navigation:navigation-compose:2.4.0-alpha01"
-    const val COMPOSE_VIEW_MODEL = "androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0"
-    const val VIEW_MODEL_KTX = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
+    const val COMPOSE_NAVIGATION = "androidx.navigation:navigation-compose:2.4.1"
+    const val COMPOSE_VIEW_MODEL = "androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1"
+    const val VIEW_MODEL_KTX = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
 
     const val WINDOW = "androidx.window:window:1.0.0"
 
     object Hilt {
-        private const val version = "1.0.0-beta01"
+        private const val version = "1.0.0"
 
         // const val VIEW_MODEL = "androidx.hilt:hilt-lifecycle-viewmodel:$version"
         const val NAVIGATION = "androidx.hilt:hilt-navigation-compose:$version"
     }
 
     object Compose {
-        private const val VERSION = "1.1.0"
+        private const val VERSION = "1.1.1"
 
         // Apis
         const val ANIMATION = "androidx.compose.animation:animation:$VERSION"

@@ -1,7 +1,7 @@
 package com.dhimandasgupta.buildsrc
 
 object ClassPath {
-    private const val ANDROID_GRADLE_PLUGIN_VERSION = "7.1.1"
+    private const val ANDROID_GRADLE_PLUGIN_VERSION = "7.1.2"
 
     const val ANDROID_GRADLE_PLUGIN =
         "com.android.tools.build:gradle:${ANDROID_GRADLE_PLUGIN_VERSION}"
