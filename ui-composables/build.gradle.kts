@@ -1,52 +1,61 @@
-import com.dhimandasgupta.buildsrc.*
+import com.dhimandasgupta.buildsrc.Accompanist
+import com.dhimandasgupta.buildsrc.AndroidX
+import com.dhimandasgupta.buildsrc.App
+import com.dhimandasgupta.buildsrc.Material3
+import com.dhimandasgupta.buildsrc.Others
 
 plugins {
-    id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
+    id("com.android.library")
+    id("kotlin-parcelize")
+    kotlin("android")
 }
 
 android {
-    compileSdk App.COMPILE_VERSION_SDK
+    compileSdk = App.COMPILE_VERSION_SDK
 
     defaultConfig {
-        minSdk App.MIN_SDK
-        targetSdk App.TARGET_SDK
-        versionCode App.VERSION_CODE
-        versionName App.VERSION_NAME
+        minSdk = App.MIN_SDK
+        targetSdk = App.TARGET_SDK
+        version = App.VERSION_CODE
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        buildTypes {
+            getByName("release") {
+                isMinifyEnabled = false
+                proguardFiles(
+                    getDefaultProguardFile("proguard-android-optimize.txt"),
+                    "proguard-rules.pro"
+                )
+            }
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = '11'
+        jvmTarget = "11"
     }
     buildFeatures {
-        compose true
+        compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion AndroidX.Compose.VERSION
+        kotlinCompilerExtensionVersion = AndroidX.Compose.VERSION
     }
     packagingOptions {
         resources {
-            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
 }
 
 dependencies {
-    implementation project(path: ':ui-theme')
-    implementation project(path: ':commom-android')
+    implementation(project(path = ":ui-theme"))
+    implementation(project(path = ":commom-android"))
 
     // Apis
     api(AndroidX.WINDOW)
@@ -83,7 +92,7 @@ dependencies {
     api(Others.COIL)
 
     // Hilt
-//    api(AndroidX.Hilt.VIEW_MODEL)
+    // api(AndroidX.Hilt.VIEW_MODEL)
     api(AndroidX.Hilt.NAVIGATION)
 
     // Debug apis

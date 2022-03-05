@@ -1,9 +1,9 @@
 import com.dhimandasgupta.buildsrc.Kotlin
 
 plugins {
-    id 'java-library'
-    id 'kotlin'
-    id 'org.jetbrains.kotlin.plugin.serialization'
+    id("java-library")
+    id("kotlin")
+    id("org.jetbrains.kotlin.plugin.serialization")
 }
 
 java {
@@ -23,5 +23,5 @@ dependencies {
     implementation(Kotlin.Ktor.SERIALIZATION_JSON)
 
     implementation(Kotlin.DateTime.KTX_DATE_TIME)
-    implementation "ch.qos.logback:logback-classic:1.2.3"
+    implementation(Kotlin.Logger.LOGBACK_CLASSIC)
 }

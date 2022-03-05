@@ -36,4 +36,10 @@ object Kotlin {
 
         const val KTX_DATE_TIME = "org.jetbrains.kotlinx:kotlinx-datetime:$VERSION"
     }
+
+    object Logger {
+        private const val VERSION = "1.2.3"
+
+        const val LOGBACK_CLASSIC = "ch.qos.logback:logback-classic:$VERSION"
+    }
 }

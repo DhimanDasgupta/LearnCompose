@@ -20,8 +20,20 @@ class NewsApiServiceImpl(
         client.get {
             url(HttpRoutes.NEWS)
             parameter("q", query)
-            parameter("from", getCurrentDate()) // yyyy-MM-dd
+            /**
+             * // from - yyyy-MM-dd
+             * For free Account using this may return empty article list
+             * so get a day prior than current date may be more appropriate
+             * */
+            parameter("from", getCurrentDate())
             parameter("sortBy", "publishedAt")
+            /**
+             * If apiKey is passed as parameter
+             * */
+            //parameter("apiKey", "add your key here")
+            /**
+             * If apiKey is passed as header
+             * */
             header("x-api-key", "add your key here")
         }
     }
